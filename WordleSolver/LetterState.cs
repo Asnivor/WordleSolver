@@ -170,10 +170,11 @@ namespace WordleSolver
             // now filter on unmatched positions (ignoring the index they are in)
             if (UnMatchedIndex0 != null)
             {
+                string m0 = MatchedIndex0 != null ? MatchedIndex0.Letter : "";
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(UnMatchedIndex0.Letter) &&
-                     a.Word.Substring(0, 1).ToUpper() != UnMatchedIndex0.Letter
+                     a.Word.Substring(0, 1).ToUpper() != m0
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -185,10 +186,11 @@ namespace WordleSolver
 
             if (UnMatchedIndex1 != null)
             {
+                string m1 = MatchedIndex1 != null ? MatchedIndex1.Letter : "";
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(UnMatchedIndex1.Letter) &&
-                     a.Word.Substring(1, 1).ToUpper() != UnMatchedIndex1.Letter
+                     a.Word.Substring(1, 1).ToUpper() != m1
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -200,10 +202,11 @@ namespace WordleSolver
 
             if (UnMatchedIndex2 != null)
             {
+                string m2 = MatchedIndex2 != null ? MatchedIndex2.Letter : "";
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(UnMatchedIndex2.Letter) &&
-                     a.Word.Substring(2, 1).ToUpper() != UnMatchedIndex2.Letter
+                     a.Word.Substring(2, 1).ToUpper() != m2
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -215,10 +218,11 @@ namespace WordleSolver
 
             if (UnMatchedIndex3 != null)
             {
+                string m3 = MatchedIndex3 != null ? MatchedIndex3.Letter : "";
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(UnMatchedIndex3.Letter) &&
-                     a.Word.Substring(3, 1).ToUpper() != UnMatchedIndex3.Letter
+                     a.Word.Substring(3, 1).ToUpper() != m3
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -230,10 +234,11 @@ namespace WordleSolver
 
             if (UnMatchedIndex4 != null)
             {
+                string m4 = MatchedIndex4 != null ? MatchedIndex4.Letter : "";
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(UnMatchedIndex4.Letter) &&
-                     a.Word.Substring(4, 1).ToUpper() != UnMatchedIndex4.Letter
+                     a.Word.Substring(4, 1).ToUpper() != m4
                      select new WordMatch()
                      {
                          Word = a.Word,
