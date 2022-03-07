@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("WordleSolver")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("ASNiVOR")]
 [assembly: AssemblyProduct("WordleSolver")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
