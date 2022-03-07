@@ -5,8 +5,110 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordleSolver"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Asni's Wordle Helper" Height="900" Width="600">
+
+    
+
     <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel HorizontalAlignment="Center" Margin="0">
+                <Label FontSize="20" FontWeight="Bold" Margin="0,50,0,0">!!! It's not cheating !!!</Label>
+                <Label HorizontalAlignment="Center" FontWeight="Bold">Add Greens Below</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0">
+                <TextBox Name="tbg0" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tbg_TextChanged"
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="DarkGreen" />
+                <TextBox Name="tbg1" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tbg_TextChanged"
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="DarkGreen"  />
+                <TextBox Name="tbg2" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tbg_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="DarkGreen"  />
+                <TextBox Name="tbg3" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tbg_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="DarkGreen"  />
+                <TextBox Name="tbg4" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tbg_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="DarkGreen"  />
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0">
+                <Label HorizontalAlignment="Center" FontWeight="Bold">Add Yellows Below</Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0">
+                <TextBox Name="tby0" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tby_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Orange" />
+                <TextBox Name="tby1" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tby_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Orange" />
+                <TextBox Name="tby2" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tby_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Orange" />
+                <TextBox Name="tby3" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tby_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Orange" />
+                <TextBox Name="tby4" Width="30" Height="30" Margin="10" PreviewTextInput="PreviewTextInput" TextChanged="Tby_TextChanged" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="Orange" />                
+                
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <Label HorizontalAlignment="Center" FontWeight="Bold">Excluded Letters</Label>
+                <StackPanel Name="spRow01" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!--
+                    <ToggleButton Name="togQ" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">Q</ToggleButton>
+                    <ToggleButton Name="togW" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">W</ToggleButton>
+                    <ToggleButton Name="togE" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">E</ToggleButton>
+                    <ToggleButton Name="togR" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">R</ToggleButton>
+                    <ToggleButton Name="togT" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">T</ToggleButton>
+                    <ToggleButton Name="togY" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">Y</ToggleButton>
+                    <ToggleButton Name="togU" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">U</ToggleButton>
+                    <ToggleButton Name="togI" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">I</ToggleButton>
+                    <ToggleButton Name="togO" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">O</ToggleButton>
+                    <ToggleButton Name="togP" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">P</ToggleButton>     
+                    -->
+                </StackPanel>
+
+                <StackPanel Name="spRow02" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!--
+                    <ToggleButton Name="togA" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">A</ToggleButton>
+                    <ToggleButton Name="togS" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">S</ToggleButton>
+                    <ToggleButton Name="togD" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">D</ToggleButton>
+                    <ToggleButton Name="togF" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">F</ToggleButton>
+                    <ToggleButton Name="togG" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">G</ToggleButton>
+                    <ToggleButton Name="togH" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">H</ToggleButton>
+                    <ToggleButton Name="togJ" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">J</ToggleButton>
+                    <ToggleButton Name="togK" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">K</ToggleButton>
+                    <ToggleButton Name="togL" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">L</ToggleButton>
+                    -->
+                </StackPanel>
+
+                <StackPanel Name="spRow03" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <!--
+                    <ToggleButton Name="togZ" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">Z</ToggleButton>
+                    <ToggleButton Name="togX" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">X</ToggleButton>
+                    <ToggleButton Name="togC" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">C</ToggleButton>
+                    <ToggleButton Name="togV" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">V</ToggleButton>
+                    <ToggleButton Name="togB" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">B</ToggleButton>
+                    <ToggleButton Name="togN" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">N</ToggleButton>
+                    <ToggleButton Name="togM" FontSize="20" FontWeight="Bold" Background="Transparent" Margin="5" Width="30">M</ToggleButton>
+                    -->
+                </StackPanel>
+
+            </StackPanel>
+
+            <DataGrid Name="dgResults" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                      HorizontalAlignment="Center" Width="300" Height="350"
+                      DataContext="WordMatch">
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn FontSize="10" Header="Potential Words" Binding="{Binding Word}" />
+                    <DataGridTextColumn FontSize="10" Header="Score" Binding="{Binding Score}" />
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+<!--
+            <TextBox Width="300" Height="150" Margin="20" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                
+            </TextBox>
+            -->
+        </StackPanel>
+        
         
     </Grid>
 </Window>

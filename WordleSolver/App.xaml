@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:WordleSolver"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="CharacterCasing" Value="Upper"/>
+            <Setter Property="MaxLength" Value="1" />
+        </Style>
     </Application.Resources>
 </Application>
