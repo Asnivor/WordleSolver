@@ -128,18 +128,23 @@ namespace WordleSolver
                 {
                     case "tbg0":
                         LetterState.MatchedIndex0 = letterObject;
+                        tby0.Text = "";
                         break;
                     case "tbg1":
                         LetterState.MatchedIndex1 = letterObject;
+                        tby1.Text = "";
                         break;
                     case "tbg2":
                         LetterState.MatchedIndex2 = letterObject;
+                        tby2.Text = "";
                         break;
                     case "tbg3":
                         LetterState.MatchedIndex3 = letterObject;
+                        tby3.Text = "";
                         break;
                     case "tbg4":
                         LetterState.MatchedIndex4 = letterObject;
+                        tby4.Text = "";
                         break;
                 }
             }
