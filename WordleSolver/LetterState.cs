@@ -169,7 +169,6 @@ namespace WordleSolver
 
                 working = results;
             }
-
             
 
             // now filter on unmatched positions (ignoring the index they are in)
@@ -180,7 +179,8 @@ namespace WordleSolver
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(workingUnmatched) &&
-                     a.Word.Substring(0, 1).ToUpper() != workingMatched
+                     a.Word.Substring(0, 1).ToUpper() != workingMatched &&
+                     a.Word.Substring(0, 1).ToUpper() != workingUnmatched
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -197,7 +197,8 @@ namespace WordleSolver
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(workingUnmatched) &&
-                     a.Word.Substring(1, 1).ToUpper() != workingMatched
+                     a.Word.Substring(1, 1).ToUpper() != workingMatched &&
+                     a.Word.Substring(1, 1).ToUpper() != workingUnmatched
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -214,7 +215,8 @@ namespace WordleSolver
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(workingUnmatched) &&
-                     a.Word.Substring(2, 1).ToUpper() != workingMatched
+                     a.Word.Substring(2, 1).ToUpper() != workingMatched &&
+                     a.Word.Substring(2, 1).ToUpper() != workingUnmatched
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -231,7 +233,8 @@ namespace WordleSolver
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(workingUnmatched) &&
-                     a.Word.Substring(3, 1).ToUpper() != workingMatched
+                     a.Word.Substring(3, 1).ToUpper() != workingMatched &&
+                     a.Word.Substring(3, 1).ToUpper() != workingUnmatched
                      select new WordMatch()
                      {
                          Word = a.Word,
@@ -248,7 +251,8 @@ namespace WordleSolver
                 results =
                     (from a in working
                      where a.Word.ToUpper().Contains(workingUnmatched) &&
-                     a.Word.Substring(4, 1).ToUpper() != workingMatched
+                     a.Word.Substring(4, 1).ToUpper() != workingMatched &&
+                     a.Word.Substring(4, 1).ToUpper() != workingUnmatched
                      select new WordMatch()
                      {
                          Word = a.Word,
