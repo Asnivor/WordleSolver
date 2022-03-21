@@ -258,5 +258,42 @@ namespace WordleSolver
             var data = LetterState.RecalcMatches(this);
             dgResults.ItemsSource = data;
         }
+
+        private void BtnReset_Click(object sender, RoutedEventArgs e)
+        {
+            List<ToggleButton> toggleButtons = new List<ToggleButton>();
+            foreach (var l in spRow01.Children)
+            {
+                var t = (ToggleButton)l as ToggleButton;
+                toggleButtons.Add(t);                
+            }
+            foreach (var l in spRow02.Children)
+            {
+                var t = (ToggleButton)l as ToggleButton;
+                toggleButtons.Add(t);
+            }
+            foreach (var l in spRow03.Children)
+            {
+                var t = (ToggleButton)l as ToggleButton;
+                toggleButtons.Add(t);
+            }
+
+            foreach (var t in toggleButtons)
+            {
+                t.IsChecked = false;
+            }
+
+            tbg0.Text = "";
+            tbg1.Text = "";
+            tbg2.Text = "";
+            tbg3.Text = "";
+            tbg4.Text = "";
+
+            tby0.Text = "";
+            tby1.Text = "";
+            tby2.Text = "";
+            tby3.Text = "";
+            tby4.Text = "";
+        }
     }
 }

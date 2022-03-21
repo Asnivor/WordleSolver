@@ -107,6 +107,9 @@
                 
             </TextBox>
             -->
+
+            <Button Name="btnReset" Margin="20" Click="BtnReset_Click">RESET</Button>
+            
         </StackPanel>
         
         
